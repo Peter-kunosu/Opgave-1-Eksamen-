@@ -12,7 +12,7 @@ public class Klimarabat {
     public int rabat (String måned, int ture){
         int rabat;
 
-        switch (måned.toLowerCase()) {
+        switch (måned.toLowerCase()) { // Der kunne havde været tilføjet 2 arraylists (Sommer og vinter), men jeg har valgt at gøre det på min måde.
             case "november", "december", "januar", "februar", "marts":
                 rabat = 15;
                 break;
@@ -25,9 +25,14 @@ public class Klimarabat {
                 System.out.println("Ugyldig måned");
                 return 0;
         }
-
-        int sum = rabat * ture;
-        System.out.println("Rabat for " + måned + ": " + sum + " kr.");
-        return sum;
+        if (ture >= 20) {
+            int sum = rabat * ture + 50;
+            System.out.println("Rabat for " + måned + ": " + sum + " kr. (Ekstra 50 kr for 20+ ture!!");
+            return sum;
+        } else {
+            int sum = rabat * rabat;
+            System.out.println("Rabat for " + måned + ": " + sum + " kr.");
+            return sum;
+        }
     }
 }

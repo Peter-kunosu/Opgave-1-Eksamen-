@@ -1,0 +1,29 @@
+Måden jeg har tilføjet måneder til switch casen i klassen Klimarabat.
+Kan eventuelt se således ud
+public Klimarabat() {
+        vinter = new ArrayList<>(Arrays.asList(
+                "november", "december", "januar", "februar", "marts"
+        ));
+
+        sommer = new ArrayList<>(Arrays.asList(
+                "april", "maj", "juni", "juli", "august", "september", "oktober"
+        ));
+    }
+
+    Og ændre:
+    switch om til et if-else statement
+
+    således:
+    måned = måned.toLowerCase()
+
+    if (vinter.contains(måned)){
+    rabat = 15
+    } else if (sommer.contains(måned)){
+    rabat = 10
+    } else {
+    ui.displayMsg("\nUgyldig Måned")
+    return 0;
+    }
+
+    int sum = rabat * ture
+    return sum

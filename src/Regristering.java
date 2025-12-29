@@ -7,6 +7,8 @@ public class Regristering {
     public void registrering () {
         boolean running = true;
         int samletRabat = 0;
+        double co2 = 0;
+        double samletTræer = 0;
 
         while (running) {
             ui.displayMsg("\nDu skal bare udfylde følgende spørgsmål");
@@ -21,12 +23,19 @@ public class Regristering {
             Klimarabat rb = new Klimarabat(måned, ture);
             int beregnetRabat = rb.rabat(måned, ture);
 
+            Kuldioxid kd = new Kuldioxid(ture);
+            double beregnetCo2 = kd.co2Beregner(ture);
+
             samletRabat += beregnetRabat;
+            co2 += beregnetCo2;
+            samletTræer = co2 / 20;
 
 
-            running = ui.choiceYN("Vil du registrere endnu en måned? (Y/N)");
+            running = ui.choiceYN("Vil du registrere endnu en måned? (Y/N)"); // Her gør metoden choiceYN at koden kan blive ved med at køre eller stoppe.
         }
         ui.displayMsg("\nTak for at gøre klimaet sundere!");
-        ui.displayMsg("\nSamlet rabat i alt: " + samletRabat + " kr.");
+        ui.displayMsg("\nSamlet rabat i alt: " + samletRabat + " kr. og vil blive overført til NemKonto.");
+        ui.displayMsg("\nDu har samlet sparet klimaet for " + co2 + "kg CO2 og træ-ækvivalent på " + samletTræer + " træers årlige absorption.");
+        ui.displayMsg("\n ");
     }
 }

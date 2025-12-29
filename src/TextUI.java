@@ -14,7 +14,7 @@ public class TextUI {
         if (input.equalsIgnoreCase("Y")) {
             return true;
         } else {
-            return input.equalsIgnoreCase("N") ? false : this.choiceYN(msg);
+            return input.equalsIgnoreCase("N") ? false : this.choiceYN(msg); // Kører indtil brugeren faKtisk svare Yes eller No ved hjælp af rekursion.
         }
     }
 }
