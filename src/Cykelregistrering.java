@@ -6,7 +6,7 @@ Regristering rg = new Regristering();
 
 
     public void cykelregistreringMenu() {
-        boolean running = true; // Gør at selve while loopet kan stoppes igen efter man har valgt 2) Afslut!
+        boolean running = true;
         while (running) {
 
             System.out.println("\nVelkommen til cykelregistreringen");
@@ -14,9 +14,9 @@ Regristering rg = new Regristering();
             System.out.println("1) Registrer ture");
             System.out.println("2) Afslut");
 
-            char cNumber = scan.next().charAt(0); // Dette er måden jeg scanner brugerens svar!
+            char cNumber = scan.next().charAt(0);
 
-            if (cNumber != '1' && cNumber != '2'){ // Et lille safety net for at brugeren ikke ødelægger koden ved at skrive et bogstav!
+            if (cNumber != '1' && cNumber != '2'){
                 ui.displayMsg("Ugyldigt Valg!");
 
             } else {

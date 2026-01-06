@@ -12,7 +12,7 @@ public class Klimarabat {
     public int rabat (String måned, int ture){
         int rabat;
 
-        switch (måned.toLowerCase()) { // Der kunne havde været tilføjet 2 arraylists (Sommer og vinter), men jeg har valgt at gøre det på min måde.
+        switch (måned.toLowerCase()) {
             case "november", "december", "januar", "februar", "marts":
                 rabat = 15;
                 break;

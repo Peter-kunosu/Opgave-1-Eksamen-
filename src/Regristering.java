@@ -31,7 +31,7 @@ public class Regristering {
             samletTræer = co2 / 20;
 
 
-            running = ui.choiceYN("Vil du registrere endnu en måned? (Y/N)"); // Her gør metoden choiceYN at koden kan blive ved med at køre eller stoppe.
+            running = ui.choiceYN("Vil du registrere endnu en måned? (Y/N)");
         }
         ui.displayMsg("\nTak for at gøre klimaet sundere!");
         ui.displayMsg("\nSamlet rabat i alt: " + samletRabat + " kr. og vil blive overført til NemKonto.");
